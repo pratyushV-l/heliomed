@@ -17,8 +17,6 @@ services:
         generateValue: true
       - key: OPENAI_API_KEY
         sync: false
-      - key: CORS_ORIGINS
-        value: '["*"]'
 
   # Frontend Service
   - type: web
@@ -34,8 +32,7 @@ services:
           type: web
           name: heliomed-backend
           envVarKey: RENDER_EXTERNAL_URL
-      - key: VITE_NEON_AUTH_URL
-        sync: false
+
 
 databases:
   - name: heliomed-db

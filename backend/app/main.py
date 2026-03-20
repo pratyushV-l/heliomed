@@ -9,6 +9,7 @@ app = FastAPI(title="Helio Med API", version="1.0.0")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.CORS_ORIGINS,
+    allow_origin_regex=r"https://.*\.onrender\.com",  # Allow all Render subdomains
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
