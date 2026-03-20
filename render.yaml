@@ -18,10 +18,7 @@ services:
       - key: OPENAI_API_KEY
         sync: false
       - key: CORS_ORIGINS
-        fromService:
-          type: web
-          name: heliomed-frontend
-          envVarKey: RENDER_EXTERNAL_URL
+        value: '["*"]'
 
   # Frontend Service
   - type: web
